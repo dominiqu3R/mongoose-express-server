@@ -81,6 +81,35 @@ app.get('/find/:database/:collection', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+app.post('/insert/:database/:collection', async (req, res) => {
+    try {
+        // Extract the request parameters using destructuring
+        // Get the request body and store it as data
+        // Get the appropriate Mongoose model
+        // Create a new instance of that model with the data
+        // Save the new document to the database
+        // Log a success message to the console
+        // Send back the newly created document as JSON with a 201 status code
+    } catch (err) {
+        // Log any errors to the console
+        // Send back a 400 status code and the error message in the response
+    }
+});
+
+app.put('/update/:database/:collection/:id', async (req, res) => {
+    try {
+        // Extract the database, collection, and id from request parameters
+        // Get the request body as data
+        // Get the appropriate Mongoose model
+        // Find the document by id and update it
+        // If document was not found, early return with a 404 status and error message
+        // Log a success message to the console
+        // Send back the updated document with a 200 status code
+    } catch (err) {
+        // Log error to the console
+        // Send back a 400 status code with the error message
+    }
+});
 
 // DELETE route to delete a specific collection in a database
 app.delete('/delete-collection/:database/:collection', async (req, res) => {
